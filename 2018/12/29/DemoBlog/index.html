@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.6.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="大纲目录[TOC]  变量与常量变量PHP 中变量的规则  变量以 $ 符号开始，后面跟着变量的名称； 变量名必须以字母或者下划线字符开始； 变量名只能包含字母数字字符以及下划线（A-z、0-9 和 _ ）； 变量名不能包含空格变量名是区分大小写的（$y 和 $Y 是两个不同的变量）；  创建（声明）PHP 变量因为 PHP 是一门弱类型语言，所以没有声明变量的关键字，变量在您第一次赋值给它的时">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DemoBlog">
+<meta property="og:url" content="http://yoursite.com/2018/12/29/DemoBlog/index.html">
+<meta property="og:site_name" content="Hemm Blog">
+<meta property="og:description" content="大纲目录[TOC]  变量与常量变量PHP 中变量的规则  变量以 $ 符号开始，后面跟着变量的名称； 变量名必须以字母或者下划线字符开始； 变量名只能包含字母数字字符以及下划线（A-z、0-9 和 _ ）； 变量名不能包含空格变量名是区分大小写的（$y 和 $Y 是两个不同的变量）；  创建（声明）PHP 变量因为 PHP 是一门弱类型语言，所以没有声明变量的关键字，变量在您第一次赋值给它的时">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-29T07:40:25.443Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DemoBlog">
+<meta name="twitter:description" content="大纲目录[TOC]  变量与常量变量PHP 中变量的规则  变量以 $ 符号开始，后面跟着变量的名称； 变量名必须以字母或者下划线字符开始； 变量名只能包含字母数字字符以及下划线（A-z、0-9 和 _ ）； 变量名不能包含空格变量名是区分大小写的（$y 和 $Y 是两个不同的变量）；  创建（声明）PHP 变量因为 PHP 是一门弱类型语言，所以没有声明变量的关键字，变量在您第一次赋值给它的时">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/29/DemoBlog/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>DemoBlog | Hemm Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hemm Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/29/DemoBlog/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="s1ro6">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hemm Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">DemoBlog
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-29 14:59:55 / Modified: 15:40:25" itemprop="dateCreated datePublished" datetime="2018-12-29T14:59:55+08:00">2018-12-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><strong>大纲目录</strong><br>[TOC]</p>
+</blockquote>
+<h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p><strong>PHP 中变量的规则</strong></p>
+<ol>
+<li>变量以 <code>$</code> 符号开始，后面跟着变量的名称；</li>
+<li>变量名必须以字母或者下划线字符开始；</li>
+<li>变量名只能包含字母数字字符以及下划线（<code>A-z</code>、<code>0-9</code> 和 <code>_</code> ）；</li>
+<li>变量名不能包含空格变量名是区分大小写的（$y 和 $Y 是两个不同的变量）；</li>
+</ol>
+<p><br><br><strong>创建（声明）PHP 变量</strong><br>因为 PHP 是一门弱类型语言，所以没有声明变量的关键字，变量在您第一次赋值给它的时候被创建。进入运行时阶段，PHP 会根据右值的类型自动设置变量的类型。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$txt = <span class="string">"Hello world!"</span>;</span><br><span class="line">$x = <span class="number">5</span>;</span><br><span class="line">$y = <span class="number">10.5</span>;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="global-关键字"><a href="#global-关键字" class="headerlink" title="global 关键字"></a>global 关键字</h4><p>PHP 在函数外部创建的变量属于全局变量，当在函数内需要访问函数外部的全局变量时，则需要通过 <code>global</code> 关键字来使用全局变量，否则直接使用的话默认视为函数内的普通变量对待。<br>全局变量的底层本质是将所有全局变量存储在一个名为 <code>$GLOBALS[index]</code> 的数组中，<code>index</code> 保存变量的名称。这个数组可以在函数内部访问，也可以直接用来更新全局变量。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$x = <span class="number">5</span>;</span><br><span class="line">$y = <span class="number">10</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foobar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 通过 global 关键字</span></span><br><span class="line">    <span class="keyword">global</span> $x, $y;</span><br><span class="line">    $y = $x + $y;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 通过全局变量底层结构</span></span><br><span class="line">    $GLOBALS[<span class="string">'y'</span>] = $GLOBALS[<span class="string">'x'</span>] + $GLOBALS[<span class="string">'y'</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foobar();</span><br><span class="line"><span class="keyword">echo</span> $y;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="static-关键字"><a href="#static-关键字" class="headerlink" title="static 关键字"></a>static 关键字</h4><p>当一个函数完成时，它内部的所有变量通常都会被删除。然而有时候您希望某个局部变量不要被删除。<br>要做到这一点，请在您第一次声明变量时使用 static 关键字。<br>需要注意的是 static 关键字只改变变量的生命周期，不会修改变量的作用域。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foobar</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> $x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">echo</span> $x;</span><br><span class="line">    $x++;</span><br><span class="line">&#125;</span><br><span class="line">foobar();   <span class="comment">// 0</span></span><br><span class="line">foobar();   <span class="comment">// 1</span></span><br><span class="line">foobar();   <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><p>常量是一个简单值的标识符。该值在脚本中不能改变。<br>一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)。</p>
+<p>设置常量，使用 <code>define()</code> 函数，其需要两个必填一个选填参数，分别为：</p>
+<ol>
+<li><code>name</code>：必选参数，常量名称，即标志符；</li>
+<li><code>value</code>：必选参数，常量的值；</li>
+<li><code>case_insensitive</code>：可选参数，如果设置为 TRUE，该常量则大小写不敏感。默认是大小写敏感的；</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">"FOOBAR"</span>, <span class="string">"this is value"</span>, <span class="keyword">TRUE</span>);</span><br><span class="line"><span class="keyword">echo</span> fooBAR;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h4 id="组合比较符-PHP-7"><a href="#组合比较符-PHP-7" class="headerlink" title="组合比较符 (PHP 7+)"></a>组合比较符 (PHP 7+)</h4><p>PHP 7 新增加的运算符号（俗称：宇宙飞船符号），用于判断符号两侧的值大小关系。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 整型</span></span><br><span class="line"><span class="keyword">echo</span> <span class="number">1</span> &lt;=&gt; <span class="number">1</span>; <span class="comment">// 0</span></span><br><span class="line"><span class="keyword">echo</span> <span class="number">1</span> &lt;=&gt; <span class="number">9</span>; <span class="comment">// -1</span></span><br><span class="line"><span class="keyword">echo</span> <span class="number">9</span> &lt;=&gt; <span class="number">1</span>; <span class="comment">// 1</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// 浮点型</span></span><br><span class="line"><span class="keyword">echo</span> <span class="number">1.5</span> &lt;=&gt; <span class="number">1.5</span>; <span class="comment">// 0</span></span><br><span class="line"><span class="keyword">echo</span> <span class="number">1.5</span> &lt;=&gt; <span class="number">2.5</span>; <span class="comment">// -1</span></span><br><span class="line"><span class="keyword">echo</span> <span class="number">2.5</span> &lt;=&gt; <span class="number">1.5</span>; <span class="comment">// 1</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// 字符串</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"a"</span> &lt;=&gt; <span class="string">"a"</span>; <span class="comment">// 0</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"a"</span> &lt;=&gt; <span class="string">"b"</span>; <span class="comment">// -1</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"b"</span> &lt;=&gt; <span class="string">"a"</span>; <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>实例</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong><code>x == y</code></strong></td>
+<td style="text-align:center">等于</td>
+<td>如果 x 等于 y，则返回 true</td>
+<td>5 == 8 返回 false</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x === y</code></strong></td>
+<td style="text-align:center">绝对等于</td>
+<td>如果 x 等于 y，且它们类型相同，则返回 true</td>
+<td>5 === “5” 返回 false</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x != y</code></strong></td>
+<td style="text-align:center">不等于</td>
+<td>如果 x 不等于 y，则返回 true</td>
+<td>5 != 8 返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x &lt;&gt; y</code></strong></td>
+<td style="text-align:center">不等于</td>
+<td>如果 x 不等于 y，则返回 true</td>
+<td>5 &lt;&gt; 8 返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x !== y</code></strong></td>
+<td style="text-align:center">绝对不等于</td>
+<td>如果 x 不等于 y，或它们类型不相同，则返回 true</td>
+<td>5! == “5” 返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x &gt; y</code></strong></td>
+<td style="text-align:center">大于</td>
+<td>如果 x 大于 y，则返回 true</td>
+<td>5 &gt; 8 返回 false</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x &lt; y</code></strong></td>
+<td style="text-align:center">小于</td>
+<td>如果 x 小于 y，则返回 true</td>
+<td>5 &lt; 8 返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x &gt;= y</code></strong></td>
+<td style="text-align:center">大于等于</td>
+<td>如果 x 大于或者等于 y，则返回 true</td>
+<td>5 &gt;= 8 返回 false</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x &lt;= y</code></strong></td>
+<td style="text-align:center">小于等于</td>
+<td>如果 x 小于或者等于 y，则返回 true</td>
+<td>5 &lt;= 8 返回 true</td>
+</tr>
+</tbody>
+</table>
+<h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><p>运算符    等同于    描述<br>x = y    x = y    左操作数被设置为右侧表达式的值<br>x += y    x = x + y    加<br>x -= y    x = x - y    减<br>x <em>= y    x = x </em> y    乘<br>x /= y    x = x / y    除<br>x %= y    x = x % y    模（除法的余数）<br>a .= b    a = a . b    连接两个字符串</p>
+<h4 id="递增-递减运算符"><a href="#递增-递减运算符" class="headerlink" title="递增/递减运算符"></a>递增/递减运算符</h4><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p>运算符    名称    描述    实例<br>x and y    与    如果 x 和 y 都为 true，则返回 true    x=6<br>y=3<br>(x &lt; 10 and y &gt; 1) 返回 true<br>x or y    或    如果 x 和 y 至少有一个为 true，则返回 true    x=6<br>y=3<br>(x==6 or y==5) 返回 true<br>x xor y    异或    如果 x 和 y 有且仅有一个为 true，则返回 true    x=6<br>y=3<br>(x==6 xor y==3) 返回 false<br>x &amp;&amp; y    与    如果 x 和 y 都为 true，则返回 true    x=6<br>y=3<br>(x &lt; 10 &amp;&amp; y &gt; 1) 返回 true<br>x || y    或    如果 x 和 y 至少有一个为 true，则返回 true    x=6<br>y=3<br>(x==5 || y==5) 返回 false<br>! x    非    如果 x 不为 true，则返回 true    x=6<br>y=3<br>!(x==y) 返回 true</p>
+<h4 id="数组运算符"><a href="#数组运算符" class="headerlink" title="数组运算符"></a>数组运算符</h4><table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>运算符</strong></th>
+<th style="text-align:center"><strong>名称</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong><code>x + y</code></strong></td>
+<td style="text-align:center">集合</td>
+<td>x 和 y 的集合</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x == y</code></strong></td>
+<td style="text-align:center">相等</td>
+<td>如果 x 和 y 具有相同的键/值对，则返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x === y</code></strong></td>
+<td style="text-align:center">恒等</td>
+<td>如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x != y</code></strong></td>
+<td style="text-align:center">不相等</td>
+<td>如果 x 不等于 y，则返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x &lt;&gt; y</code></strong></td>
+<td style="text-align:center">不相等</td>
+<td>如果 x 不等于 y，则返回 true</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong><code>x !== y</code></strong></td>
+<td style="text-align:center">不恒等</td>
+<td>如果 x 不等于 y，则返回 true</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h4><p>三元运算符的符号是：<code>?:</code>，表达式为：<code>(expr1) ? (expr2) : (expr3)</code>。<br>执行逻辑：对 expr1 求值为 <em>TRUE</em> 时，返回的值为 expr2；在 expr1 求值为 <em>FALSE</em> 时，返回的值为 expr3。</p>
+<p>从 PHP 5.3 开始，可以省略三元运算符的中间部分。即表达式 <code>expr1 ?: expr3</code> 在 expr1 求值为 <em>TRUE</em> 时返回 expr1，否则返回 expr3。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/29/TestBlog/" rel="next" title="TestBlog">
+                <i class="fa fa-chevron-left"></i> TestBlog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">s1ro6</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#变量与常量"><span class="nav-number">1.</span> <span class="nav-text">变量与常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#global-关键字"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">global 关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#static-关键字"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">static 关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">常量</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">2.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#组合比较符-PHP-7"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">组合比较符 (PHP 7+)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较运算符"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算术运算符"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#赋值运算符"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#递增-递减运算符"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">递增/递减运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">2.0.0.6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组运算符"><span class="nav-number">2.0.0.7.</span> <span class="nav-text">数组运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三元运算符"><span class="nav-number">2.0.0.8.</span> <span class="nav-text">三元运算符</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">s1ro6</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
